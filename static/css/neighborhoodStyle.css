@@ -1,0 +1,46 @@
+﻿#neigborhoodDiv{
+	display: none;
+	float:right;
+	height: 367px;
+	width: 100%;
+	border-style:solid;
+	border-width:2px;
+	border-color:orange;
+	}
+
+#neighborhoodTable {
+	background-color: #ffffff;
+   	border-style:none;
+    float:auto;
+    width :90%;
+	}
+#neighborhoodIdTd {
+    visibility:hidden;
+    width:2p;
+}
+div#choseNeighborhood{
+	border-style:solid;
+	border-width:1px;
+	border-color:orange;
+	overflow-y: auto;
+	width: 90%;
+	height:120px;
+}
+div#tenantInNeighborhood{
+	border-style:solid;
+	border-width:1px;
+	border-color:orange;
+	overflow-y: auto;
+	width: 90%;
+	height:120px;
+}
+table#tenantInNeighborhoodTable{
+	background-color: #ffffff;
+   	border-style:none;
+    float:auto;
+    width :90%;
+    cellpadding:2;
+	cellspacing :2;
+	}
+
+	

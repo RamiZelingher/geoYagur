@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block bodyBlock %}
+
+<div id="mapDiv" >
+</div> <!--  mapdiv -->
+<div id="rightHafe" align="right">
+    <ul class="tabs">
+           <li><a href="#tenantDiv">דיירים</a></li>
+           <li><a href="#apartmentDiv">רחובות</a></li>
+           <li><a href="#neigborhoodDiv">שכונות</a></li>
+       </ul>
+
+<div id="tenantDiv" class="tab_container"  >
+<div id="searchArea" dir = "rtl" align="right" >
+    <form id= "searchForm" action="" method="get" align="right" >
+	<table id="searchTable" align="center">
+		<tr>
+			<td></td>
+			<td>הכנס את שם החבר המבוקש</td>
+		</tr><tr>
+		</tr><tr>
+       		<td>שם פר-טי</td>
+       		<td><label>
+                   <input id="privetNameSearch" type="text" name="privetNameRequest">
+               </label></td>
+       	</tr><tr>
+       		<td>שם משפחה</td>
+       		<td><label>
+                   <input id="familyNameSearch" type="text" name="familyNameRequest">
+               </label></td>
+       	</tr><tr>
+       		<td> <input id="searchTenantButton" type="submit" value="חפש"> </td>
+       		<td></td>
+   		</tr><tr>
+    		<td>נמצאו {{ recordsOfPeople|length }} דיירים</td>
+    		<td> לחץ על השם הרצוי על מנת לראות את כתובתו</td>
+    	</tr>
+    </table>
+     </form>
+</div> <!-- searchArea -->
+<div id="contentArea" align="center" >
+<form id= "tableForm" action="" method="get" >
+<input type="hidden" name="id_selected" value="">
+{% if recordsOfPeople %}
+	<table id="peopleTable"  dir="rtl"   >
+	<th >שם פרטי</th>
+	<th>שם משפחה</th>
+	{% for i in recordsOfPeople %}
+          <tr id="peopleRow">
+                <td >{{  i.given }}</td>
+                <td  >{{ i.family }}</td>
+               <td  id="zeut">{{ i.id }}</td>
+           </tr>
+     {% endfor %}
+    </table>
+    <br/>
+{% else %}
+    <p>לא ניתן למצוא נתונים מתאימים לבקשה</p>
+    <p>{{familyNameRequest}} {{privetNameRequest}}</p>
+{% endif %}
+<br/>
+</form>
+</div> <!-- contentArea -->
+<br/>
+<div id="resultArea" dir = "rtl" align="center">
+{% if oneRecordOfTenants %}
+	<p>{{privetAdress}}</p>
+    {% else %}
+    <p>  {{onRecordOfPeople.family}} {{onRecordOfPeople.given}}  לא ניתן למצוא דירות   </p>
+{% endif %}
+</div> <!-- resultArea -->
+</div> <!-- tenantDiv -->
+<div id="apartmentDiv" class="tab_container" >
+<p>to be develop</p>
+</div> <!-- apartmentDiv -->
+<div id="neigborhoodDiv" class="tab_container" >
+<p>בחר את השכונה הרצויה</p>
+<div id="choseNeighborhood">
+<form id= "choseNeighborhoodForm" action="" method="get" >
+<input type="hidden" name="formId" value="choseNeighborhoodForm">
+<input type="hidden" name="neighborhood_selected" value="">
+	<table id="neighborhoodTable"  dir="rtl" >
+	{% for n in recordsOfNeighborhood %}
+          <tr id="neighborhoodRow" bgcolor="#FFFFFF"  onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';">
+                <td >{{  n.name }}</td>
+               <td id="neighborhoodIdTd">{{ n.id }}</td>
+           </tr>
+     {% endfor %}
+    </table>
+ </form>
+</div><!-- choseNeighborhood -->
+<p align="center">ב{{neighborhoodSelectedName}} נמצאו {{tenantInNeighborhood|length}} דיירים! בחר אחד מהם</p>
+<div id="tenantInNeighborhood">
+<form id= "choseTenantFromNeighborhoodForm" action="" method="get" >
+<input type="hidden" name="formId" value="choseTenantFromNeighborhoodForm">
+<input type="hidden" name="tenant_selected" value="">
+<table id="tenantInNeighborhoodTable"  dir="rtl" >
+	{% for eachTenant in tenantInNeighborhood %}
+          <tr bgcolor="#FFFFFF" onclick="choseTenantFromNeighborhood(this)" onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';">
+                <td zeut="{{eachTenant.id}}">{{  eachTenant }}</td>
+           </tr>
+     {% endfor %}
+    </table>
+</form>
+</div> <!-- tenantInNeighborhood -->
+</div> <!-- neigborhoodDiv -->
+
+</div> <!-- rightHafe -->
+{% endblock %}
+

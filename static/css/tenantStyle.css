@@ -1,0 +1,42 @@
+﻿
+#peopleTable {
+	aline: right;
+   	border-style:none;
+    width :90%;
+    cellpadding:2;
+	cellspacing :2;
+	}
+
+#zeut {
+    visibility:hidden;
+    width:2p;
+}
+
+#searchArea {
+	dir :rtl;
+	height: 140px; 
+	width: 80%;
+	border-style:none;
+	}	
+#contentArea {
+    border: 1px solid orange;
+    overflow-y: auto;
+	width: 90%;
+	height:150px;
+	}
+#resultArea{
+    border: 1px solid orange;
+    overflow-y: auto;
+	width: 90%;
+	height:50px;
+	}
+#tenantTab {
+	color: #fff;
+	line-height: 2em;
+    padding-left: 20px;
+    float: left;
+    text-decoration: none;
+	}
+
+
+

@@ -1,0 +1,17 @@
+﻿#appartmentDiv {
+	display: none;
+	dir :rtl; 
+	float:right;
+	height: 367px;
+	width: 100%;
+	border-style:solid;
+	border-width:2px;
+	border-color:orange;
+	}
+#apprtmentTab {
+	background: url(tabs.gif) 100% 0;
+    line-height: 2em;
+    padding-left: 20px;
+    float: left;
+	}
+		
