@@ -13,14 +13,14 @@
 
 <div id="tenantDiv" class="tab_container"  >
 <div id="searchArea" dir = "rtl" align="right" >
-   
+    <form id= "searchForm" action="" method="get" align="right" >
 	<table id="searchTable" align="center">
 		<tr>
 			<td></td>
 			<td>הכנס את שם החבר המבוקש</td>
 		</tr><tr>
 		</tr><tr>
-       		<td>שם פרטי</td>
+       		<td>שם פר-טי</td>
        		<td><label>
                    <input id="privetNameSearch" type="text" name="privetNameRequest">
                </label></td>
@@ -72,7 +72,7 @@
 </div> <!-- resultArea -->
 </div> <!-- tenantDiv -->
 <div id="apartmentDiv" class="tab_container" >
-<input id="tryAjax" type="submit" value="חפש">
+<p>to be develop</p>
 </div> <!-- apartmentDiv -->
 <div id="neigborhoodDiv" class="tab_container" >
 <p>בחר את השכונה הרצויה</p>

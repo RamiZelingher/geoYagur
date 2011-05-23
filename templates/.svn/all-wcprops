@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/yagurmap_paddress/!svn/ver/2/templates
+END
+mainpage.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/yagurmap_paddress/!svn/ver/10/templates/mainpage.html
+END
+500.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/yagurmap_paddress/!svn/ver/2/templates/500.html
+END
+404.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/yagurmap_paddress/!svn/ver/2/templates/404.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/yagurmap_paddress/!svn/ver/2/templates/login.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/yagurmap_paddress/!svn/ver/10/templates/base.html
+END

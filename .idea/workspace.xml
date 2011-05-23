@@ -2,9 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="176de97b-f4e2-4084-9c1b-0fbddbf02b61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/geoyagur.iml" afterPath="$PROJECT_DIR$/.idea/geoyagur.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/.svn/text-base/__init__.py.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/.svn/text-base/admin.py.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/.svn/text-base/models.py.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/.svn/text-base/tests.py.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/.svn/text-base/views.py.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/fixtures/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/address/fixtures/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/.svn/text-base/appartmentStyle.css.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/.svn/text-base/mainStyle.css.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/.svn/text-base/neighborhoodStyle.css.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/.svn/text-base/tabStyle.css.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/.svn/text-base/tenantStyle.css.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/data/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/data/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/.svn/prop-base/yagur-map.swf.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/.svn/prop-base/yagur-photo.JPG.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/.svn/text-base/yagur-map.swf.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/.svn/text-base/yagur-photo.JPG.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/.svn/text-base/jquery.js.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/.svn/text-base/main.js.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/.svn/text-base/mainStyle.js.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/.svn/text-base/map.js.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/.svn/text-base/tab.js.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/.svn/text-base/404.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/.svn/text-base/500.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/.svn/text-base/base.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/.svn/text-base/login.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/.svn/text-base/mainpage.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/.svn/text-base/base_site.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/.svn/text-base/change_form.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/.svn/text-base/change_list.html.svn-base" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/.svn/all-wcprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/.svn/entries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/.svn/text-base/login.html.svn-base" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mainpage.html" afterPath="$PROJECT_DIR$/templates/mainpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yagur/views.py" afterPath="$PROJECT_DIR$/yagur/views.py" />
     </list>
     <ignored path="geoyagur.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +80,7 @@
       <file leaf-file-name="mainpage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="11" selection-start="59" selection-end="65" vertical-scroll-proportion="-3.4482758">
+            <state line="32" column="46" selection-start="932" selection-end="950" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -54,55 +104,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.yaml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="40" selection-start="343" selection-end="343" vertical-scroll-proportion="0.24377224">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yagur/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0">
+            <state line="56" column="101" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="43" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="78" selection-start="591" selection-end="591" vertical-scroll-proportion="-5.172414">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="neighborhoodStyle.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/neighborhoodStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="17" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tenantStyle.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/tenantStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="1" selection-start="110" selection-end="156" vertical-scroll-proportion="0.0">
+            <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.040925268">
               <folding />
             </state>
           </provider>
@@ -123,22 +146,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/yagur/admin.py" />
         <option value="$PROJECT_DIR$/yagur/models.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/address/admin.py" />
-        <option value="$PROJECT_DIR$/urls.py" />
-        <option value="$PROJECT_DIR$/yagur/views.py" />
         <option value="$PROJECT_DIR$/static/css/tenantStyle.css" />
         <option value="$PROJECT_DIR$/static/js/mainStyle.js" />
         <option value="$PROJECT_DIR$/static/css/neighborhoodStyle.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/mainpage.html" />
         <option value="$PROJECT_DIR$/static/css/mainStyle.css" />
-        <option value="$PROJECT_DIR$/static/js/main.js" />
         <option value="$PROJECT_DIR$/static/js/map.js" />
         <option value="$PROJECT_DIR$/index.yaml" />
         <option value="$PROJECT_DIR$/app.yaml" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/urls.py" />
+        <option value="$PROJECT_DIR$/yagur/views.py" />
+        <option value="$PROJECT_DIR$/templates/mainpage.html" />
+        <option value="$PROJECT_DIR$/static/js/main.js" />
       </list>
     </option>
   </component>
@@ -168,6 +191,50 @@
       <sortByType ProjectPane="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geoyagur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geoyagur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geoyagur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geoyagur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geoyagur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yagur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Favorites">
+        <subPane subId="geoyagur">
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.favoritesTreeView.FavoritesTreeNodeDescriptor" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files">
@@ -187,43 +254,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites">
-        <subPane subId="geoyagur">
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.favoritesTreeView.FavoritesTreeNodeDescriptor" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToAction.allIncluded" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.appengine.AppEngineConfigurable" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="recentsLimit" value="5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -338,7 +375,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/home" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -397,22 +434,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38367346" sideWeight="0.49186993" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32924694" sideWeight="0.49593496" order="6" side_tool="false" content_ui="tabs" x="20" y="270" width="984" height="188" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2347561" sideWeight="0.7285714" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.171875" sideWeight="0.72665536" order="0" side_tool="false" content_ui="tabs" x="544" y="166" width="278" height="395" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17113096" sideWeight="0.7351443" order="0" side_tool="false" content_ui="tabs" x="544" y="166" width="278" height="395" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27334467" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26485568" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924694" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.4940476" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -451,11 +488,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/address/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yagur/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" />
@@ -464,11 +496,6 @@
     <entry file="file://$PROJECT_DIR$/address/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/not_use/mainStyle.js">
@@ -481,9 +508,24 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yagur/views.py">
+    <entry file="file://$PROJECT_DIR$/index.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="40" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="78" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/neighborhoodStyle.css">
@@ -498,49 +540,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="11" selection-start="59" selection-end="65" vertical-scroll-proportion="-3.4482758">
+        <state line="32" column="46" selection-start="932" selection-end="950" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/mainStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="78" selection-start="591" selection-end="591" vertical-scroll-proportion="-5.172414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="7" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="11" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml">
+    <entry file="file://$PROJECT_DIR$/yagur/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="343" selection-end="343" vertical-scroll-proportion="0.24377224">
+        <state line="56" column="101" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="43" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.040925268">
           <folding />
         </state>
       </provider>

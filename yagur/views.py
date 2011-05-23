@@ -1,8 +1,7 @@
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response
 from django.utils import simplejson
+from django.core import serializers
 from django.http import HttpResponse
-from django.core.exceptions import ObjectDoesNotExist
-from django.http import HttpResponseRedirect, HttpResponseServerError
 
 
 from yagur.models import People
@@ -11,7 +10,7 @@ from address.models import Tenants,Appartments,Streets,Buildings,Neighborhoods
 
 def homePage(request):
 
-    recordsOfPeople = People.objects.all();
+    recordsOfPeople = People.objects.order_by("family")
     recordsOfNeighborhood = Neighborhoods.objects.all();
 
     if 'privetNameRequest' in request.GET and request.GET['privetNameRequest']:
@@ -46,8 +45,16 @@ def homePage(request):
 
     if request.is_ajax():
         jsonData = simplejson.dumps(recordsOfPeople);
-        mimetype = 'application/xml'
+        mimetype = 'application/javascript';
         return HttpResponse(jsonData,mimetype)
     else:
         return render_to_response('c:/project/geoyagur/templates/mainpage.html',locals());
 
+def xhr_test(request):
+    if request.is_ajax():
+        mimetype = 'application/xml'
+        format = 'json'
+        messages = serializers.serialize(format, People.objects.filter(family=request.GET.get("family")))
+    else:
+        messages = "Hello"
+    return HttpResponse(messages,mimetype)

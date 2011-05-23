@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/yagurmap_paddress/!svn/ver/2/templates/admin
+END
+base_site.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/yagurmap_paddress/!svn/ver/7/templates/admin/base_site.html
+END
+change_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/yagurmap_paddress/!svn/ver/2/templates/admin/change_list.html
+END
+change_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/yagurmap_paddress/!svn/ver/2/templates/admin/change_form.html
+END
