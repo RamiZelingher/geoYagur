@@ -2,24 +2,24 @@
 
     $("#peopleTable tr:odd").css("backgroundColor", "#ffcc99");
     $("#peopleTable tr").click(tenantChoose);
-    $("#searchTenantButton1").click(tenantSearch);
+    $("#searchTenantButton").click(ajaxListPeople);
     $("#neighborhoodTable tr").click(neighborhoodChoose);
-    $(" #tryAjax").click(ajaxListPeople);
-
 
 });
 
 ajaxListPeople=function() {
-    var clientData = { family: "זלינגר" };
-    $.getJSON("xhr_test",clientData, responseAjaxListPeople)
+    var clientData = { familyReqest:  $("input#familyNameSearch").val(), privetReqest:  $("input#privetNameSearch").val()};
+    $.getJSON("ajaxListPeople",clientData, responseAjaxListPeople)
     };
 
 responseAjaxListPeople=function(data){
+    $("#peopleTable tr").remove();
     $.each(data, function(i,record){
-            alert(record.fields.family)
-            numRecord=i
+         $('#peopleTable').append('<tr> <td>'+  record.fields.family+'</td> <td>'+record.fields.given+'</td> <td >'+ record.pk+'</td> </tr>')
            });
-    alert("number of records found" + (numRecord+1).toString())
+    $("#totalPeople").html (data.length)
+    $("#peopleTable tr:odd").css("backgroundColor", "#ffcc99");
+    $("#peopleTable tr").click(tenantChoose);
 }
 
 
@@ -32,7 +32,7 @@ tenantChoose = function() {
 tenantSearch = function() {
     var clientPrivetName = $("input#privetNameSearch").val();
     var clientFamilyName = $("input#privetNameSearch").val();
-     var data = { privetNameRequest:privetName, familyNameRequest:familyName };
+     var data = { privetNameRequest:clientPrivetName, familyNameRequest:clientFamilyName };
     var ajaxArgs = { type:"get", url:"", data:data, complete:updatePeopleList};
     $.getJSON("",data,function(json) {
           var result = "Language code is \"<strong>" + json.responseData.language + "\"";

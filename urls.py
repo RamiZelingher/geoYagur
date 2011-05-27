@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)), 
 	(r'^home$','yagur.views.homePage'),
 	(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-    (r'^xhr_test$','yagur.views.xhr_test'),
+    (r'^ajaxListPeople$','yagur.views.ajaxListPeople'),
 )
 
 if settings.DEBUG:

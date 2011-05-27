@@ -42,19 +42,14 @@ def homePage(request):
         for eachAppartment in recordsOfAppartmentInNeighborhood:
             for eachTenant in Tenants.objects.filter(appartment=eachAppartment):
                 tenantInNeighborhood.append(eachTenant.tenant)
-
-    if request.is_ajax():
-        jsonData = simplejson.dumps(recordsOfPeople);
-        mimetype = 'application/javascript';
-        return HttpResponse(jsonData,mimetype)
     else:
         return render_to_response('c:/project/geoyagur/templates/mainpage.html',locals());
 
-def xhr_test(request):
+def ajaxListPeople(request):
     if request.is_ajax():
         mimetype = 'application/xml'
         format = 'json'
-        messages = serializers.serialize(format, People.objects.filter(family=request.GET.get("family")))
+        messages = serializers.serialize(format, People.objects.filter(family__contains=request.GET.get("familyReqest"),given__contains=request.GET.get("privetReqest")))
     else:
         messages = "Hello"
     return HttpResponse(messages,mimetype)
