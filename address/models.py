@@ -45,10 +45,10 @@ class Streets (models.Model):
         verbose_name_plural=_("streets")
 
 class StreetView (models.Model):
-    street = models.ForeignKey(Streets,verbose_name=_("street name"),related_name="street1")
-    point = models.PositiveIntegerField(verbose_name=_("point"))
-    position_x = models.PositiveIntegerField(verbose_name=_("x axis"))
-    position_y = models.PositiveIntegerField(verbose_name=_("y axis"))
+    street               =  models.ForeignKey(Streets,verbose_name=_("street name"),related_name="street1")
+    point                =  models.PositiveIntegerField(verbose_name=_("point"))
+    position_x        =  models.PositiveIntegerField(verbose_name=_("x axis"))
+    position_y        =  models.PositiveIntegerField(verbose_name=_("y axis"))
     
     def __unicode__(self):
         return u"%s %s" %(self.street.decode('utf-8'),self.point)
