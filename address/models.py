@@ -12,15 +12,16 @@ class Neighborhoods (models.Model):
     class Meta:
         verbose_name=_("Neighborhood")
         verbose_name_plural=_("Neighborhoods")
+       
 
 
 
 
 class NeighborhoodView (models.Model):
-    neighborhood = models.ForeignKey(Neighborhoods,related_name="neighborhood", verbose_name=_("neighborhood"))
-    point = models.PositiveIntegerField(verbose_name=_("point"))
-    position_x = models.PositiveIntegerField(verbose_name=_("x axis"))
-    position_y = models.PositiveIntegerField(verbose_name=_("y axis"))
+    neighborhood     =  models.ForeignKey(Neighborhoods,related_name="neighborhood", verbose_name=_("neighborhood"))
+    point                  =   models.PositiveIntegerField(verbose_name=_("point"))
+    position_x          =   models.PositiveIntegerField(verbose_name=_("x axis"))
+    position_y          =   models.PositiveIntegerField(verbose_name=_("y axis"))
     
     def __unicode__(self):
         return u"%s %s" %(self.neighborhood.decode('utf-8'),self.point)
@@ -31,10 +32,10 @@ class NeighborhoodView (models.Model):
 
 
 class Streets (models.Model):
-    name = models.CharField( max_length=20,verbose_name=_("street name"))
-    en_name= models.CharField( max_length=20,verbose_name=_("street name en"))
-    neighborhood = models.ForeignKey (Neighborhoods, verbose_name=_("neighborhood name"),related_name="neighborhood1") 
-    color = models.PositiveIntegerField(verbose_name=_("color"))
+    name                =   models.CharField( max_length=20,verbose_name=_("street name"))
+    en_name           =   models.CharField( max_length=20,verbose_name=_("street name en"))
+    neighborhood    =   models.ForeignKey (Neighborhoods, verbose_name=_("neighborhood name"),related_name="neighborhood1")
+    color                 =   models.PositiveIntegerField(verbose_name=_("color"))
     
     def __unicode__(self):
         return self.name.decode('utf-8')

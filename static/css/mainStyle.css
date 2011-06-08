@@ -1,6 +1,10 @@
 body {
 	  background-color: #ffffff;
 	}
+#menuBar {
+    hight: 15px;
+    width: 59%;
+}
 #mapDiv {
 	height: 400px;
 	float:left;

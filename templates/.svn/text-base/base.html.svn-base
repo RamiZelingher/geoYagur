@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/tenantStyle.css" />
     <link rel="stylesheet" type="text/css" href="../static/css/neighborhoodStyle.css" />
     <title >kibbutz yagur</title>
-    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/jquery-1.6.min.js"></script>
      <script type="text/javascript" src="../static/js/OpenLayers.js"></script>
     <script type="text/javascript" src="../static/js/main.js"></script>
     <script type="text/javascript" src="../static/js/tab.js"></script>

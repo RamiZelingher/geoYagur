@@ -7,7 +7,7 @@ mainpage.html
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/yagurmap_paddress/!svn/ver/10/templates/mainpage.html
+/svn/yagurmap_paddress/!svn/ver/12/templates/mainpage.html
 END
 500.html
 K 25
@@ -31,5 +31,5 @@ base.html
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/yagurmap_paddress/!svn/ver/10/templates/base.html
+/svn/yagurmap_paddress/!svn/ver/12/templates/base.html
 END

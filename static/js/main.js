@@ -4,8 +4,13 @@
     $("#peopleTable tr").click(tenantChoose);
     $("#searchTenantButton").click(ajaxListPeople);
     $("#neighborhoodTable tr").click(neighborhoodChoose);
+    $("#login").click(loginClick);
 
 });
+
+loginClick=function(){
+   $("#login").html(logout)
+}
 
 ajaxListPeople=function() {
     var clientData = { familyReqest:  $("input#familyNameSearch").val(), privetReqest:  $("input#privetNameSearch").val()};

@@ -6,20 +6,26 @@ END
 main.js
 K 25
 svn:wc:ra_dav:version-url
-V 51
-/svn/yagurmap_paddress/!svn/ver/9/static/js/main.js
+V 52
+/svn/yagurmap_paddress/!svn/ver/11/static/js/main.js
 END
-mainStyle.js
+mapstraction.js
 K 25
 svn:wc:ra_dav:version-url
-V 56
-/svn/yagurmap_paddress/!svn/ver/2/static/js/mainStyle.js
+V 60
+/svn/yagurmap_paddress/!svn/ver/11/static/js/mapstraction.js
 END
 tab.js
 K 25
 svn:wc:ra_dav:version-url
 V 50
 /svn/yagurmap_paddress/!svn/ver/6/static/js/tab.js
+END
+OpenStreetMap.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/yagurmap_paddress/!svn/ver/11/static/js/OpenStreetMap.js
 END
 map.js
 K 25
@@ -32,4 +38,16 @@ K 25
 svn:wc:ra_dav:version-url
 V 53
 /svn/yagurmap_paddress/!svn/ver/2/static/js/jquery.js
+END
+OpenLayers.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/yagurmap_paddress/!svn/ver/11/static/js/OpenLayers.js
+END
+jquery-1.6.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/yagurmap_paddress/!svn/ver/11/static/js/jquery-1.6.min.js
 END

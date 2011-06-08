@@ -7,7 +7,7 @@
 			alert ("id "+id);     
 			document.forms["tableForm"].submit();
 			}
-		function choseNeighborhood(row)
+		function choseNeighborhood1(row)
 			{
 			id = row.cells[0].neighborhood_id;
 			document.forms['tableForm'].id_selected.value = id; 

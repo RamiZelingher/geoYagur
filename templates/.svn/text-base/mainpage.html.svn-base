@@ -13,14 +13,14 @@
 
 <div id="tenantDiv" class="tab_container"  >
 <div id="searchArea" dir = "rtl" align="right" >
-    <form id= "searchForm" action="" method="get" align="right" >
+
 	<table id="searchTable" align="center">
 		<tr>
 			<td></td>
 			<td>הכנס את שם החבר המבוקש</td>
 		</tr><tr>
 		</tr><tr>
-       		<td>שם פר-טי</td>
+       		<td>שם פרטי</td>
        		<td><label>
                    <input id="privetNameSearch" type="text" name="privetNameRequest">
                </label></td>
@@ -31,13 +31,15 @@
                </label></td>
        	</tr><tr>
        		<td> <input id="searchTenantButton" type="submit" value="חפש"> </td>
-       		<td></td>
+       		 <td >
+                  <label>סה"כ </label>
+                 <label id="totalPeople">{{recordsOfPeople|length  }}</label>
+            </td>
    		</tr><tr>
-    		<td>נמצאו {{ recordsOfPeople|length }} דיירים</td>
+            <td></td>
     		<td> לחץ על השם הרצוי על מנת לראות את כתובתו</td>
     	</tr>
     </table>
-     </form>
 </div> <!-- searchArea -->
 <div id="contentArea" align="center" >
 <form id= "tableForm" action="" method="get" >
@@ -46,13 +48,15 @@
 	<table id="peopleTable"  dir="rtl"   >
 	<th >שם פרטי</th>
 	<th>שם משפחה</th>
+        <tbody>
 	{% for i in recordsOfPeople %}
           <tr id="peopleRow">
                 <td >{{  i.given }}</td>
                 <td  >{{ i.family }}</td>
-               <td  id="zeut">{{ i.id }}</td>
+               <td  id="zeut" >{{ i.id }}</td>
            </tr>
      {% endfor %}
+    </tbody>
     </table>
     <br/>
 {% else %}
@@ -72,7 +76,20 @@
 </div> <!-- resultArea -->
 </div> <!-- tenantDiv -->
 <div id="apartmentDiv" class="tab_container" >
-<p>to be develop</p>
+    <input id="userPrivetName" type="text" name="privetNameRequest">
+<input id="tryAjax" type="submit" value="1חפש">
+    <table id="tableAjax">
+        <th >שם פרטי</th>
+	    <th>שם משפחה</th>
+         <tr >
+                <td >aaa</td>
+                <td  >111</td>
+           </tr>
+        <tr >
+                <td >bbb</td>
+                <td  >222</td>
+           </tr>
+    </table>
 </div> <!-- apartmentDiv -->
 <div id="neigborhoodDiv" class="tab_container" >
 <p>בחר את השכונה הרצויה</p>

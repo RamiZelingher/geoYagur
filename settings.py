@@ -1,5 +1,7 @@
+
 # Django settings for geoyagur project.
 import os.path
+
 ROOT_PATH = os.path.dirname(__file__)
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,10 +11,12 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+# Activate django-dbindexer for the default database
+
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'geoyagur1',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
@@ -25,7 +29,6 @@ LANGUAGE_CODE = 'he'
 SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
-#MEDIA_ROOT = os.path.join(os.path.dirname(__file__),"static")
 MEDIA_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static')
 MEDIA_URL ='/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
@@ -48,21 +51,30 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'geoyagur.urls'
 
-#TEMPLATE_DIRS = os.path.join(os.path.dirname(__file__),"templates")
-TEMPLATE_DIRS=("C:/project/geoyagur/templates",)
+TEMPLATE_DIRS = os.path.join(os.path.dirname(__file__),"templates")
+#DATABASES['native'] = DATABASES['default']
+#DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
+#DBINDEXER_SITECONF = 'dbindexes'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
+   # 'django.contrib.humanize',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
 	'yagur',
-   'address',
+    'address',
+   # 'djangotoolbox',
+    # 'autoload',
+    #'dbindexer',
+
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+     'django.contrib.admindocs',
 )
 STATICFILES_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 STATICFILES_DIRS = ( os.path.join(os.path.dirname(__file__), 'static'),)
 STATICFILES_URL = '/static/'
+
+ACCOUNT_ACTIVATION_DAYS = 2
+LOGIN_REDIRECT_URL = 'home/'

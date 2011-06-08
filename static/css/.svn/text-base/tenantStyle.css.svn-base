@@ -1,6 +1,5 @@
 ﻿
 #peopleTable {
-	aline: right;
    	border-style:none;
     width :90%;
     cellpadding:2;
@@ -8,7 +7,6 @@
 	}
 
 #zeut {
-    visibility:hidden;
     width:2p;
 }
 
