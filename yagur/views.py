@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response
 from django.utils import simplejson
 from django.core import serializers
 from django.http import HttpResponse
+from django.contrib.auth.models import User
 
 
 from yagur.models import People
@@ -12,6 +13,12 @@ def homePage(request):
 
     recordsOfPeople = People.objects.order_by("family")
     recordsOfNeighborhood = Neighborhoods.objects.all();
+
+    if request.user.is_authenticated():
+        userName=request.user
+    else:
+        userName="visitor";
+
 
     if 'privetNameRequest' in request.GET and request.GET['privetNameRequest']:
         privetNameRequest = request.GET['privetNameRequest'];

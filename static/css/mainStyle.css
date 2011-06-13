@@ -14,6 +14,11 @@ body {
 	border-color:orange;
 	}
 
+#scaleline-id {
+    margin: 20px;
+    font-size: xx-small;
+}
+
 #rightHafe {
 	height: 400px; 
 	float:right;

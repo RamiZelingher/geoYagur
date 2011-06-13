@@ -13,10 +13,12 @@
      <script type="text/javascript" src="../static/js/map.js"></script>
 </head>
 <body >
-<div id=menuBar>
-    <form method="get" action="/admin/">
-<input type="submit" value="login" />
-        </form>
+    <!-- Header -->
+    <div id="header">
+            Welcome  {{  userName }}
+            {% block userlinks %}
+                /  <a href="/admin/"> login</a>
+            {% endblock %}
 </div>
 {% block bodyBlock %}{% endblock %}
 </body>

@@ -26,11 +26,14 @@ var control = new OpenLayers.Control();
                     notice: function (bounds) {
                         var ll = map.getLonLatFromPixel(new OpenLayers.Pixel(bounds.left, bounds.bottom));
                         var ur = map.getLonLatFromPixel(new OpenLayers.Pixel(bounds.right, bounds.top));
-                        alert(ll.lon.toFixed(4) + ", " +
+                        alert(ll.lon.toFixed(4) + "/n " +
                               ll.lat.toFixed(4) + ", " +
                               ur.lon.toFixed(4) + ", " +
                               ur.lat.toFixed(4));
                     }
                 });
-  map.addControl(control);
+  map.addControl(control);;
+       var vector_layer = new OpenLayers.Layer.Vector('Basic VectorLayer');
+map.addLayers([mapnik, vector_layer]);
+map.addControl(new OpenLayers.Control.EditingToolbar(vector_layer));
        });
