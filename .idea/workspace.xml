@@ -2,24 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="176de97b-f4e2-4084-9c1b-0fbddbf02b61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/base.html" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\.svn\all-wcprops" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\.svn\entries" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\.svn\text-base\login.html.svn-base" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\activate.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\activation_email.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\activation_email_subject.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\login.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\logout.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_change_done.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_change_form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_complete.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_confirm.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_done.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_email.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\registration_complete.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\registration_form.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geoyagur.iws" />
