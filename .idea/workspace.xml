@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="176de97b-f4e2-4084-9c1b-0fbddbf02b61" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/base.html" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\.svn\all-wcprops" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\.svn\entries" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\.svn\text-base\login.html.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\activate.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\activation_email.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\activation_email_subject.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\login.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\logout.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_change_done.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_change_form.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_complete.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_confirm.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_done.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_email.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\password_reset_form.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\registration_complete.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\project\geoyagur\templates\registration\registration_form.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/mainStyle.css" afterPath="$PROJECT_DIR$/static/css/mainStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/map.js" afterPath="$PROJECT_DIR$/static/js/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/base_site.html" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mainpage.html" afterPath="$PROJECT_DIR$/templates/mainpage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yagur/views.py" afterPath="$PROJECT_DIR$/yagur/views.py" />
     </list>
     <ignored path="geoyagur.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,91 +47,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.py">
+      <file leaf-file-name="initial_data.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/initial_data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="6" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/address/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="25" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yagur/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="29" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yagur/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="38" selection-start="311" selection-end="326" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="21" selection-start="872" selection-end="872" vertical-scroll-proportion="-13.142858">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/js/map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="26" selection-start="1624" selection-end="1624" vertical-scroll-proportion="1.2818428">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainStyle.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/mainStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainpage.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="27" selection-start="120" selection-end="120" vertical-scroll-proportion="-4.928571">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="35" selection-end="38" vertical-scroll-proportion="0.0">
+            <state line="28075" column="23" selection-start="721147" selection-end="721157" vertical-scroll-proportion="0.52034885">
               <folding />
             </state>
           </provider>
@@ -204,70 +134,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geoyagur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -304,7 +170,7 @@
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="41" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="153" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
@@ -315,8 +181,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="53" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="467" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="374" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="463" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="371" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="52" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="51" />
     <property name="GoToAction.allIncluded" value="false" />
@@ -540,8 +406,8 @@
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19345239" sideWeight="0.67232597" order="0" side_tool="false" content_ui="tabs" x="544" y="166" width="278" height="395" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32767403" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" x="497" y="315" width="775" height="397" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.4940476" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32767403" sideWeight="0.5029762" order="2" side_tool="true" content_ui="tabs" x="497" y="315" width="775" height="397" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.49107143" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -587,19 +453,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/address/admin.py">
@@ -610,13 +466,6 @@
     <entry file="file://$PROJECT_DIR$/address/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="25" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -638,22 +487,6 @@
     <entry file="file://$PROJECT_DIR$/templates/admin/base_site.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="54" selection-start="198" selection-end="198" vertical-scroll-proportion="-4.928571">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="32" selection-start="2277" selection-end="2277" vertical-scroll-proportion="1.5359589">
-          <folding>
-            <marker date="1307881023963" expanded="true" signature="552:646" placeholder="{% block stylesheet_ie ... %}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yagur/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="311" selection-end="326" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -688,7 +521,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="26" selection-start="1624" selection-end="1624" vertical-scroll-proportion="1.2818428">
+        <state line="34" column="26" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="14" selection-start="2351" selection-end="2351" vertical-scroll-proportion="-13.785714">
+          <folding>
+            <marker date="1307881023963" expanded="true" signature="552:646" placeholder="{% block stylesheet_ie ... %}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="9" selection-start="163" selection-end="216" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yagur/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="38" selection-start="311" selection-end="326" vertical-scroll-proportion="0.49864498">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28075" column="23" selection-start="721147" selection-end="721157" vertical-scroll-proportion="0.52034885">
           <folding />
         </state>
       </provider>
