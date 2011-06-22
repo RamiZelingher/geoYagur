@@ -4,11 +4,18 @@
     width :90%;
     cellpadding:2;
 	cellspacing :2;
+    font-size: 1em;
 	}
+#peopleTable tr:hover {
+		font-size: 1.4em;
+        color:red;
+}
 
 #zeut {
-    width:2p;
+  color:white;
+ visibility:hidden
 }
+
 
 #searchArea {
 	dir :rtl;
@@ -22,19 +29,7 @@
 	width: 90%;
 	height:150px;
 	}
-#resultArea{
-    border: 1px solid orange;
-    overflow-y: auto;
-	width: 90%;
-	height:50px;
-	}
-#tenantTab {
-	color: #fff;
-	line-height: 2em;
-    padding-left: 20px;
-    float: left;
-    text-decoration: none;
-	}
+
 
 
 

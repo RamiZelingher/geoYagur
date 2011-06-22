@@ -121,6 +121,6 @@ class Tenants (models.Model):
     notes = models.CharField ( max_length=20,verbose_name=_("notes "))
 
     def __unicode__(self):
-        return  unicode(str(self.tenant))
+        return  self.tenant.family.decode('utf-8')
     
 

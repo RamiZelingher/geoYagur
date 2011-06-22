@@ -27,20 +27,10 @@ def homePage(request):
     if 'familyNameRequest' in request.GET and request.GET['familyNameRequest']:
         familyNameRequest = request.GET['familyNameRequest'];
         recordsOfPeople = recordsOfPeople.filter(family__contains=familyNameRequest);
-        
+    '''
     if 'id_selected' in request.GET and request.GET['id_selected']:
-        idSelectedMember = request.GET['id_selected']
-        try:
-            onRecordOfPeople = People.objects.get(id=idSelectedMember)
-            oneRecordOfTenants = Tenants.objects.get(tenant=idSelectedMember)
-            oneRecordOfAppartments = Appartments.objects.get(id=oneRecordOfTenants.appartment.id)
-            oneRecordOfStreet = Streets.objects.get(id=oneRecordOfAppartments.streetName.id)
-            oneRecordofBuilding = Buildings.objects.get(id=oneRecordOfAppartments.building.id)
-            oneRecordofNeighborhood = Neighborhoods.objects.get(id=oneRecordOfAppartments.neighborhood.id)
-            privetAdress =oneRecordOfStreet.name+" "+str(oneRecordOfAppartments.streetNumber)+" "+oneRecordofNeighborhood.name
-        except :
-           privetAdress="no data"
-
+        privetAddress=findAddressFromPeopleId(request.GET['id_selected'])
+    '''
     if 'neighborhood_selected' in request.GET and request.GET['neighborhood_selected']:
         neighborhoodSelectedId = request.GET['neighborhood_selected']
         neighborhoodSelectedName = Neighborhoods.objects.get(id=neighborhoodSelectedId).name
@@ -50,7 +40,7 @@ def homePage(request):
             for eachTenant in Tenants.objects.filter(appartment=eachAppartment):
                 tenantInNeighborhood.append(eachTenant.tenant)
     else:
-        return render_to_response('c:/project/geoyagur/templates/mainpage.html',locals());
+        return render_to_response('mainpage.html',locals());
 
 def ajaxListPeople(request):
     if request.is_ajax():
@@ -58,5 +48,42 @@ def ajaxListPeople(request):
         format = 'json'
         messages = serializers.serialize(format, People.objects.filter(family__contains=request.GET.get("familyReqest"),given__contains=request.GET.get("privetReqest")))
     else:
-        messages = "Hello"
+        messages = "call ajaxListPeople function without ajax"
     return HttpResponse(messages,mimetype)
+
+def ajaxFindAddressFromPeopleId(request):
+    global mimetype
+    if request.is_ajax():
+        mimetype = 'text/plain'
+        privetAddress = findAddressFromPeopleId(request.GET['id_selected'])
+    else:
+       privetAddress = "call ajaxListPeople function without ajax"
+    return HttpResponse( privetAddress , mimetype)
+
+def findAddressFromPeopleId(peopleID):
+        try:
+                    oneRecordOfTenants = Tenants.objects.get(tenant=peopleID)
+                    oneRecordOfAppartments = Appartments.objects.get(id=oneRecordOfTenants.appartment.id)
+                    oneRecordOfStreet = Streets.objects.get(id=oneRecordOfAppartments.streetName.id)
+                    oneRecordofBuilding = Buildings.objects.get(id=oneRecordOfAppartments.building.id)
+                    oneRecordofNeighborhood = Neighborhoods.objects.get(id=oneRecordOfAppartments.neighborhood.id)
+                    privetAddress =oneRecordOfStreet.name+" "+str(oneRecordOfAppartments.streetNumber)+" "+oneRecordofNeighborhood.name
+        except :
+                    privetAddress ="not found the address of  "+peopleID
+        return privetAddress
+
+def ajaxFindTenantInNeighborhood (request):
+    if request.is_ajax():
+        mimetype = 'application/xml'
+        format = 'json'
+        messages = serializers.serialize(format,FindTenantInNeighborhood (request.GET.get("neighborhood_id")))
+    else:
+        messages = "call ajaxListPeople function without ajax"
+    return HttpResponse(messages,mimetype)
+
+def  FindTenantInNeighborhood (neighborhoodId):
+    try:
+        tenantInNeighborhood =Tenants.objects.select_related('tenant').select_related('appartment').filter(appartment__neighborhood =neighborhoodId)
+    except:
+         tenantInNeighborhood = []
+    return tenantInNeighborhood

@@ -6,7 +6,7 @@ body {
     width: 59%;
 }
 #mapDiv {
-	height: 400px;
+	height: 380px;
 	float:left;
 	width: 59%;
 	border-style:solid;
@@ -14,9 +14,10 @@ body {
 	border-color:orange;
 	}
 
-#scaleline-id {
-    margin: 20px;
-    font-size: xx-small;
+#coordsDiv {
+   height: 20px;
+	float:left;
+	width: 59%;
 }
 
 #rightHafe {
@@ -25,8 +26,6 @@ body {
 	width: 40%;
 	}
 
-#peopleTable tr:hover {
-		font-size: 1.4em;
-}
+
 
 	

@@ -1,13 +1,4 @@
-﻿#neigborhoodDiv{
-	display: none;
-	float:right;
-	height: 367px;
-	width: 100%;
-	border-style:solid;
-	border-width:2px;
-	border-color:orange;
-	}
-
+﻿
 #neighborhoodTable {
 	background-color: #ffffff;
    	border-style:none;

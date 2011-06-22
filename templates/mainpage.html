@@ -3,8 +3,17 @@
 {% block bodyBlock %}
 
 <div id="mapDiv" >
+<iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="http://maps.google.com/maps/ms?msa=0&amp;ie=UTF8&amp;t=f&amp;ecpose=32.73920753,35.07772128,207.93,17.342,60.807,0&amp;msid=207373915563797360967.0004a60ecd170df7f2e63&amp;ll=37.0625,-95.677068&amp;spn=24.455808,37.353516&amp;z=4&amp;output=embed">
+    </iframe>
 </div> <!--  mapdiv -->
-    <div id="scaleline-id"></div>
+
 <div id="rightHafe" align="right">
     <ul class="tabs">
            <li><a href="#tenantDiv">דיירים</a></li>
@@ -43,8 +52,6 @@
     </table>
 </div> <!-- searchArea -->
 <div id="contentArea" align="center" >
-<form id= "tableForm" action="" method="get" >
-<input type="hidden" name="id_selected" value="">
 {% if recordsOfPeople %}
 	<table id="peopleTable"  dir="rtl"   >
 	<th >שם פרטי</th>
@@ -65,16 +72,8 @@
     <p>{{familyNameRequest}} {{privetNameRequest}}</p>
 {% endif %}
 <br/>
-</form>
 </div> <!-- contentArea -->
 <br/>
-<div id="resultArea" dir = "rtl" align="center">
-{% if oneRecordOfTenants %}
-	<p>{{privetAdress}}</p>
-    {% else %}
-    <p>  {{onRecordOfPeople.family}} {{onRecordOfPeople.given}}  לא ניתן למצוא דירות   </p>
-{% endif %}
-</div> <!-- resultArea -->
 </div> <!-- tenantDiv -->
 <div id="apartmentDiv" class="tab_container" >
     <input id="userPrivetName" type="text" name="privetNameRequest">
@@ -93,11 +92,8 @@
     </table>
 </div> <!-- apartmentDiv -->
 <div id="neigborhoodDiv" class="tab_container" >
-<p>בחר את השכונה הרצויה</p>
+<p>בחר את השכונה הרצויה על ידי קליק על השם הרצוי</p>
 <div id="choseNeighborhood">
-<form id= "choseNeighborhoodForm" action="" method="get" >
-<input type="hidden" name="formId" value="choseNeighborhoodForm">
-<input type="hidden" name="neighborhood_selected" value="">
 	<table id="neighborhoodTable"  dir="rtl" >
 	{% for n in recordsOfNeighborhood %}
           <tr id="neighborhoodRow" bgcolor="#FFFFFF"  onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';">
@@ -106,9 +102,11 @@
            </tr>
      {% endfor %}
     </table>
- </form>
 </div><!-- choseNeighborhood -->
-<p align="center">ב{{neighborhoodSelectedName}} נמצאו {{tenantInNeighborhood|length}} דיירים! בחר אחד מהם</p>
+<p  align="center">
+ <lable id ="neigborhoodChoseName">עוד לא נבחרה שכונה</lable>
+ <label id="totalTenantsInNiegborhood"></label>
+</p>
 <div id="tenantInNeighborhood">
 <form id= "choseTenantFromNeighborhoodForm" action="" method="get" >
 <input type="hidden" name="formId" value="choseTenantFromNeighborhoodForm">
@@ -125,5 +123,6 @@
 </div> <!-- neigborhoodDiv -->
 
 </div> <!-- rightHafe -->
+  <div id="coordsDiv"></div>
 {% endblock %}
 

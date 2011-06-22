@@ -19,6 +19,8 @@ urlpatterns = patterns('',
 	(r'^home$','yagur.views.homePage'),
 	(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     (r'^ajaxListPeople$','yagur.views.ajaxListPeople'),
+     (r'^ajaxFindAddressFromPeopleId$','yagur.views.ajaxFindAddressFromPeopleId'),
+     (r'^ajaxFindTenantInNeighborhood','yagur.views.ajaxFindTenantInNeighborhood'),
     (r'^$','yagur.views.homePage'),
 
 )
