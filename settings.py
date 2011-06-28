@@ -65,6 +65,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 	'yagur',
     'address',
+   # 'olwidget',
    # 'djangotoolbox',
     # 'autoload',
     #'dbindexer',
@@ -78,3 +79,4 @@ STATICFILES_URL = '/static/'
 
 ACCOUNT_ACTIVATION_DAYS = 2
 LOGIN_REDIRECT_URL = 'home/'
+#GEOS_LIBRARY_PATH='C:/Python25/DLLs/geosc.dll'

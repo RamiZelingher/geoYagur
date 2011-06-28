@@ -34,4 +34,14 @@ table#tenantInNeighborhoodTable{
 	cellspacing :2;
 	}
 
+table#tenantInNeighborhoodTable tr:hover {
+		font-size: 1.4em;
+        color:red;
+}
+
+#zeut1 {
+  color:white;
+ visibility:hidden
+}
+
 	

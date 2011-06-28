@@ -38,7 +38,8 @@ ajaxTenantChoose = function() {
     };
 
 responseAjaxTenantChoose = function(data){
-   alert(data)
+    addPoint( yagurMap,mapnik,vector_layer,35.075,32.749);
+    alert(data);
 };
 
 
@@ -54,12 +55,13 @@ ajaxNeighbourhoodChoose = function(){
              $.getJSON("ajaxFindTenantInNeighborhood",clientData, responseAjaxNeighbourhoodChoose)
             }
 
-responseAjaxNeighbourhoodChoose = function(data){
+responseAjaxNeighbourhoodChoose = function(data1){
 
     $("#tenantInNeighborhoodTable tr").remove();
-    $("#totalTenantsInNiegborhood").html(data.length)
-    $.each(data, function(i,record){
-                                                     $('#tenantInNeighborhoodTable').append('<tr> <td>'+  record.fields.tenant+'</td> <td>'+record.fields.apprtmentNumber+'</td> <td >'+ record.pk+'</td> </tr>')
+    $("#totalTenantsInNiegborhood").html(data1.length)
+    $.each(data1, function(i,record){
+                                                     $('#tenantInNeighborhoodTable').append('<tr> <td>'+  record.fields.family+'</td> <td>'+record.fields.given+'</td> <td id=zeut1>'+ record.pk+'</td> </tr>')
                                                      });
-    $("#tenantInNeighborhood").click(ajaxTenantChoose);
+    $("#tenantInNeighborhoodTable tr:odd").css("backgroundColor", "#ffcc99");
+    $("#tenantInNeighborhoodTable tr").click(ajaxTenantChoose);
 }

@@ -74,16 +74,16 @@ def findAddressFromPeopleId(peopleID):
 
 def ajaxFindTenantInNeighborhood (request):
     if request.is_ajax():
-        mimetype = 'application/xml'
+        mimetype1 = 'application/xml'
         format = 'json'
         messages = serializers.serialize(format,FindTenantInNeighborhood (request.GET.get("neighborhood_id")))
     else:
         messages = "call ajaxListPeople function without ajax"
-    return HttpResponse(messages,mimetype)
+    return HttpResponse(messages,mimetype1)
 
 def  FindTenantInNeighborhood (neighborhoodId):
     try:
-        tenantInNeighborhood =Tenants.objects.select_related('tenant').select_related('appartment').filter(appartment__neighborhood =neighborhoodId)
+        tenantInNeighborhood=People.objects.filter(man2__appartment__neighborhood__exact =neighborhoodId)
     except:
          tenantInNeighborhood = []
     return tenantInNeighborhood
