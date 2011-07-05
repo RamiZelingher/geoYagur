@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 from yagur.models import People
-from address.models import Tenants,Appartments,Streets,Buildings,Neighborhoods
+from address.models import Tenants,Appartments,Streets,Buildings,Neighborhoods,NeighborhoodView
 
 
 def homePage(request):
@@ -87,3 +87,21 @@ def  FindTenantInNeighborhood (neighborhoodId):
     except:
          tenantInNeighborhood = []
     return tenantInNeighborhood
+def ajaxGetNeighborhoodPolygon(request):
+      if request.is_ajax():
+            mimetype2 = 'application/xml'
+            format = 'json'
+            messages = serializers.serialize(format,FindNeighborhoodPolygon (request.GET.get("neighborhood_id")))
+      else:
+            messages = "call ajaxGetNeighborhoodPolygon function without ajax"
+      return HttpResponse(messages,mimetype2)
+def  FindNeighborhoodPolygon (neighborhoodId):
+    try:
+            neighborhoodVertx=NeighborhoodView.objects.filter( neighborhood__exact =neighborhoodId)
+    except:
+            neighborhoodVertx = []
+    return neighborhoodVertx
+
+def googleEarth(request):
+     return render_to_response('googleEarth.html',locals());
+

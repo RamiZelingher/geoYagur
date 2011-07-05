@@ -20,11 +20,11 @@ class Neighborhoods (models.Model):
 class NeighborhoodView (models.Model):
     neighborhood     =  models.ForeignKey(Neighborhoods,related_name="neighborhood", verbose_name=_("neighborhood"))
     point                  =   models.PositiveIntegerField(verbose_name=_("point"))
-    position_x          =   models.PositiveIntegerField(verbose_name=_("x axis"))
-    position_y          =   models.PositiveIntegerField(verbose_name=_("y axis"))
+    position_x          =   models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("x axis"))
+    position_y          =   models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("y axis"))
     
     def __unicode__(self):
-        return u"%s %s" %(self.neighborhood.decode('utf-8'),self.point)
+        return str(self.point)
 
     class Meta:
         verbose_name=_("neighborhood View ")

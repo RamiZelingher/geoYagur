@@ -38,21 +38,24 @@ ajaxTenantChoose = function() {
     };
 
 responseAjaxTenantChoose = function(data){
-    addPoint( yagurMap,mapnik,vector_layer,35.075,32.749);
-    alert(data);
+ createPlacemark("",  32.741433,35.078658);
+  showBallon(placemark,data );
+//    drawMarker( yagurMap, mapnik,vector_layer,35.08,32.739);
+//    alert(data);
 };
 
-
+/* the usr choose the neighboorhod for the table
 neighborhoodChoose = function() {
     document.forms['choseNeighborhoodForm'].neighborhood_selected.value =  this.cells[1].innerHTML;
      document.forms["choseNeighborhoodForm"].submit();
    alert(this.cells[1].innerHTML+"2")
 };
-
+*/
 ajaxNeighbourhoodChoose = function(){
             $("#neigborhoodChoseName").html (this.cells[0].innerHTML);
              var clientData = { neighborhood_id: this.cells[1].innerHTML};
              $.getJSON("ajaxFindTenantInNeighborhood",clientData, responseAjaxNeighbourhoodChoose)
+            $.getJSON("ajaxGetNeighborhoodPolygon",clientData, responseAjaxNeighbourhoodPolygon)
             }
 
 responseAjaxNeighbourhoodChoose = function(data1){
@@ -64,4 +67,13 @@ responseAjaxNeighbourhoodChoose = function(data1){
                                                      });
     $("#tenantInNeighborhoodTable tr:odd").css("backgroundColor", "#ffcc99");
     $("#tenantInNeighborhoodTable tr").click(ajaxTenantChoose);
+
+}
+responseAjaxNeighbourhoodPolygon = function(vertex){
+     var arrayOfPoints = [];
+     $.each(vertex, function(i,record){
+                                                        arrayOfPoints.push({x:parseFloat(record.fields. position_x), y:parseFloat(record.fields. position_y)});
+                                                         });
+  
+     showPoligon(arrayOfPoints );
 }

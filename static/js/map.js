@@ -1,17 +1,14 @@
-﻿$(document).ready(function() {
+﻿
     var lon = 35.075;
     var lat = 32.749;
-    var zoom =16;
-    var yagurMap = new OpenLayers.Map("mapDiv");
-    var mapnik = new OpenLayers.Layer.OSM();
-        yagurMap.addLayer(mapnik);
-        yagurMap.setCenter(new OpenLayers.LonLat(lon,lat) // Center of the map
-          .transform(
-            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-            new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
-          ),zoom // Zoom level
-        );
-     var vector_layer = new OpenLayers.Layer.Vector('Basic VectorLayer')
+    var zoom =14;
+    var yagurMap;
+    var mapnik;
+    var vector_layer;
+    var markers;
+    var iconSize;
+     var iconOffset;
+     var icon;
     var style_green =
     {
         strokeColor: "#000000",
@@ -19,11 +16,82 @@
         strokeWidth: 2,
         fillColor: "#00FF00",
         fillOpacity: 0.6
-    };
-     drawPoint( yagurMap,mapnik,vector_layer,35.075,32.749);
-    drawBox(yagurMap,mapnik,vector_layer,style_green,35.075,32.760,35.1,33.1,35.075,33.160,35.075,32.760);
+          };
 
+    $(document).ready(function() {
+    yagurMap = new OpenLayers.Map("map");
+    mapnik = new OpenLayers.Layer.OSM("מפת רחובות");
+    vector_layer = new OpenLayers.Layer.Vector('מבני מגורים')
+    markers = new OpenLayers.Layer.Markers( "דגלים" );
+     iconSize = new OpenLayers.Size(21, 25);
+     iconOffset = new OpenLayers.Pixel(-(iconSize.w / 2), -iconSize.h);
+     icon = new OpenLayers.Icon("./static/img/marker.png", iconSize, iconOffset);
+    yagurMap.addLayers([mapnik, vector_layer]);
+    yagurMap.addLayer(markers);
+
+        yagurMap.setCenter(new OpenLayers.LonLat(lon,lat) // Center of the map
+          .transform(
+                            new OpenLayers.Projection("EPSG:4326"),
+                            yagurMap.getProjectionObject()
+                             ),zoom
+        );
+         var gphy = new OpenLayers.Layer.Google( "מפת קווי גובה", {type: google.maps.MapTypeId.TERRAIN} );
+    var gsat = new OpenLayers.Layer.Google("Google Satellite", {type:google.maps.MapTypeId.SATELLITE} );
+      yagurMap.addLayers([gphy, gsat]);
+        yagurMap.addControl(new OpenLayers.Control.LayerSwitcher());
+ drawBox( yagurMap, mapnik,vector_layer,style_green,35.075,32.749,35.0745,32.749,35.0745,32.7485,35.075,32.7485);
        });
+
+function drawPoint( mape,server,vector,x,y){
+            point = new OpenLayers.Geometry.Point(x,y).transform
+                    (
+                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+                     );
+            feature_point = new OpenLayers.Feature.Vector(point);
+            vector.addFeatures([feature_point]);
+}
+function drawMarker(mape,server,vector,x,y){
+     lonLat = new OpenLayers.LonLat( x,y )
+          .transform(
+                 new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                 new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+                         )
+    markers.addMarker(new OpenLayers.Marker(lonLat,icon));
+}
+function drawBox(map,mapnik, vector,style,x1,y1,x2,y2,x3,y3,x4,y4){
+            p1 = new OpenLayers.Geometry.Point(x1,y1).transform
+                    (
+                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+                     );
+             p2 = new OpenLayers.Geometry.Point(x2,y2).transform
+                    (
+                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+                     );
+             p3 = new OpenLayers.Geometry.Point(x3,y3).transform
+                    (
+                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+                     );
+             p4 = new OpenLayers.Geometry.Point(x4,y4).transform
+                    (
+                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+                     );
+    var points = [];
+    points.push(p1);
+    points.push(p2);
+    points.push(p3);
+    points.push(p4);
+
+    // create a polygon feature from a list of points
+    var linearRing = new OpenLayers.Geometry.LinearRing(points);
+    var polygonFeature = new OpenLayers.Feature.Vector(linearRing,null, style);
+    vector.addFeatures([polygonFeature]);
+}
+
 /*
 var control = new OpenLayers.Control();
                 OpenLayers.Util.extend(control, {
@@ -54,63 +122,10 @@ map.layers[1].preFeatureInsert = function(feature){
 map.layers[1].onFeatureInsert = function(feature){
                                                             alert('onFeatureInsert - Geometry:' + feature.geometry)
                                                                 };
-                var markers = new OpenLayers.Layer.Markers("Cities");
-                var location = new OpenLayers.LonLat(3904353.1840742,3862025.5510041);
-                 var size = new OpenLayers.Size(21,25);
-                 var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-                 var icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png',size,offset);
-                 markers.addMarker(new OpenLayers.Marker(location,icon.clone()));
-map.addLayer(markers);
 map.addControl(new OpenLayers.Control.MousePosition());
 map.events.register("mousemove", map, function(e) {
                 var position = this.events.getMousePosition(e);
                 OpenLayers.Util.getElement("coordsDiv").innerHTML = position;
                                  });
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
+ map.addControl(new OpenLayers.Control.LayerSwitcher());
  */
-function drawPoint(map,mapnik, vector_layer,x,y){
-            point = new OpenLayers.Geometry.Point(x,y).transform
-                    (
-                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
-                     );
-            feature_point = new OpenLayers.Feature.Vector(point);
-            vector_layer.addFeatures([feature_point]);
-            map.addLayers([mapnik, vector_layer]);
-
-}
-
-function drawBox(map,mapnik, vector_layer,style,x1,y1,x2,y2,x3,y3,x4,y4){
-            p1 = new OpenLayers.Geometry.Point(x1,y1).transform
-                    (
-                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
-                     );
-             p2 = new OpenLayers.Geometry.Point(x2,y2).transform
-                    (
-                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
-                     );
-             p3 = new OpenLayers.Geometry.Point(x3,y3).transform
-                    (
-                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
-                     );
-             p4 = new OpenLayers.Geometry.Point(x4,y4).transform
-                    (
-                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-                    new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
-                     );
-    var points = [];
-    points.push(p1);
-    points.push(p2);
-    points.push(p3);
-    points.push(p4);
-
-    // create a polygon feature from a list of points
-    var linearRing = new OpenLayers.Geometry.LinearRing(points);
-    var polygonFeature = new OpenLayers.Feature.Vector(linearRing,null, style);
-    vector_layer.addFeatures([polygonFeature]);
-    map.addLayers([mapnik, vector_layer]);
-
-}

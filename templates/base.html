@@ -5,13 +5,19 @@
     <link rel="stylesheet" type="text/css" href="../static/css/tabStyle.css" />
     <link rel="stylesheet" type="text/css" href="../static/css/tenantStyle.css" />
     <link rel="stylesheet" type="text/css" href="../static/css/neighborhoodStyle.css" />
-     <link rel="stylesheet" type="text/css" href="../static/css/olwidget.css" />
     <title >kibbutz yagur</title>
     <script type="text/javascript" src="../static/js/jquery-1.6.min.js"></script>
-     <script type="text/javascript" src="../static/js/OpenLayers.js"></script>
-     <script type="text/javascript" src="../static/js/map.js"></script>
-    <script type="text/javascript" src="../static/js/main.js"></script>
-    <script type="text/javascript" src="../static/js/tab.js"></script>
+     <!--<script type="text/javascript" src="../static/js/OpenLayers.js"></script>
+    <script type='text/javascript' src='../static/js/OpenStreetMap.js'></script>
+  <script src="http://maps.google.com/maps/api/js?v=3.3&sensor=false"></script>
+   <script type="text/javascript" src="../static/js/map.js"></script>-->
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAHSBrH8ooqBDX1c4fL8INxhRi_j0U6kJrkFvY4-OX2XYmEAa76BTNfDaJQK7GbtTFlTSS90ixe_0ITQ"></script>
+    <script type="text/javascript" src="../static/js/mape3d.js"></script>
+      <script type="text/javascript" src="../static/js/tab.js"></script>
+     <script type="text/javascript" src="../static/js/main.js"></script>
+
+
+
 
 
 </head>
@@ -22,6 +28,7 @@
             {% block userlinks %}
                 /  <a href="/admin/"> login</a>
             {% endblock %}
+                /<a href="/googleEarth">3 מימדים</a>
 </div>
 {% block bodyBlock %}{% endblock %}
 </body>

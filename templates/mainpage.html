@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block bodyBlock %}
-
-<div id="mapDiv" >
+<div id="map" >
+<div id="map3d"></div>
 <!--
 <iframe
             width="100%"
@@ -14,7 +14,6 @@
             src="http://maps.google.com/maps/ms?msa=0&amp;ie=UTF8&amp;t=f&amp;ecpose=32.73920753,35.07772128,207.93,17.342,60.807,0&amp;msid=207373915563797360967.0004a60ecd170df7f2e63&amp;ll=37.0625,-95.677068&amp;spn=24.455808,37.353516&amp;z=4&amp;output=embed">
     </iframe> -->
 </div> <!--  mapdiv -->
-
 <div id="rightHafe" align="right">
     <ul class="tabs">
            <li><a href="#tenantDiv">דיירים</a></li>
@@ -124,6 +123,7 @@
 </div> <!-- neigborhoodDiv -->
 
 </div> <!-- rightHafe -->
-  <div id="coordsDiv"></div>
+  <div id="coordsDiv">
+  </div>
 {% endblock %}
 

@@ -21,8 +21,10 @@ urlpatterns = patterns('',
     (r'^ajaxListPeople$','yagur.views.ajaxListPeople'),
      (r'^ajaxFindAddressFromPeopleId$','yagur.views.ajaxFindAddressFromPeopleId'),
      (r'^ajaxFindTenantInNeighborhood','yagur.views.ajaxFindTenantInNeighborhood'),
+      (r'^ajaxGetNeighborhoodPolygon','yagur.views.ajaxGetNeighborhoodPolygon'),
+      (r'^KML','address.views.updateKML'),
     (r'^$','yagur.views.homePage'),
-
+     (r'^googleEarth','yagur.views.googleEarth'),
 )
 
 if settings.DEBUG:
