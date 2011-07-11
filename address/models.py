@@ -47,8 +47,8 @@ class Streets (models.Model):
 class StreetView (models.Model):
     street               =  models.ForeignKey(Streets,verbose_name=_("street name"),related_name="street1")
     point                =  models.PositiveIntegerField(verbose_name=_("point"))
-    position_x        =  models.PositiveIntegerField(verbose_name=_("x axis"))
-    position_y        =  models.PositiveIntegerField(verbose_name=_("y axis"))
+    position_x        = models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("x axis"))
+    position_y        = models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("y axis"))
     
     def __unicode__(self):
         return u"%s %s" %(self.street.decode('utf-8'),self.point)
@@ -77,8 +77,8 @@ class Buildings (models.Model):
 class BuildingView (models.Model):
     building = models.ForeignKey(Buildings, verbose_name=_("building name"),related_name="building1")
     point = models.PositiveIntegerField(verbose_name=_("point"))
-    position_x = models.PositiveIntegerField(verbose_name=_("x axis"))
-    position_y = models.PositiveIntegerField(verbose_name=_("y axis"))
+    position_x = models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("x axis"))
+    position_y = models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("y axis"))
     
     def __unicode__(self):
         return u"%s %s" %(self.buildings.decode('utf-8'),self.point)
@@ -108,8 +108,8 @@ class Appartments (models.Model):
 class AppartmentView (models.Model):
     appartment = models.ForeignKey(Appartments, related_name= "appartment1")
     point = models.PositiveIntegerField(verbose_name=_("point"))
-    position_x = models.PositiveIntegerField(verbose_name=_("x axis"))
-    position_y = models.PositiveIntegerField(verbose_name=_("y axis"))
+    position_x =models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("x axis"))
+    position_y = models.DecimalField( max_digits=14, decimal_places=12,verbose_name=_("y axis"))
     
     def __unicode__(self):
         return u"%s %s" %(self.appartment.decode('utf-8'),self.point.decode('utf-8'))

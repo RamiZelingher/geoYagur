@@ -1,23 +1,14 @@
 {% extends "base.html" %}
 
 {% block bodyBlock %}
-<div id="map" >
-<div id="map3d"></div>
-<!--
-<iframe
-            width="100%"
-            height="100%"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="http://maps.google.com/maps/ms?msa=0&amp;ie=UTF8&amp;t=f&amp;ecpose=32.73920753,35.07772128,207.93,17.342,60.807,0&amp;msid=207373915563797360967.0004a60ecd170df7f2e63&amp;ll=37.0625,-95.677068&amp;spn=24.455808,37.353516&amp;z=4&amp;output=embed">
-    </iframe> -->
-</div> <!--  mapdiv -->
+    <div id="leftHafe" >
+        <div id="map" >1234567</div>
+        <div id="map3d"></div>
+    </div>
 <div id="rightHafe" align="right">
     <ul class="tabs">
            <li><a href="#tenantDiv">דיירים</a></li>
-           <li><a href="#apartmentDiv">רחובות</a></li>
+           <li><a href="#streetDiv">רחובות</a></li>
            <li><a href="#neigborhoodDiv">שכונות</a></li>
        </ul>
 
@@ -75,25 +66,41 @@
 </div> <!-- contentArea -->
 <br/>
 </div> <!-- tenantDiv -->
-<div id="apartmentDiv" class="tab_container" >
-    <input id="userPrivetName" type="text" name="privetNameRequest">
-<input id="tryAjax" type="submit" value="1חפש">
-    <table id="tableAjax">
-        <th >שם פרטי</th>
-	    <th>שם משפחה</th>
-         <tr >
-                <td >aaa</td>
-                <td  >111</td>
+<div id="streetDiv" class="tab_container" >
+    <p>בחר את הרחוב הרצוי</p>
+   <div id=chooseStreetDiv>
+       <table id=streetTable  dir="rtl">
+           {% for n in recordsOfStreet %}
+            <tr id="neighborhoodRow" bgcolor="#FFFFFF"  onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';">
+                <td >{{  n.name }}</td>
+               <td id="streetIdTd">{{ n.id }}</td>
            </tr>
-        <tr >
-                <td >bbb</td>
-                <td  >222</td>
+            {% endfor %}
+       </table>
+   
+   </div><!--choose  street -->
+<p  align="center">
+  <lable id ="prestreetChoseName">ב מספר הדיירים</lable>
+ <lable id ="streetChoseName">עוד לא נבחר דייר</lable>
+ <label id="totalTenantsInStreet"></label>
+</p>
+<div id="tenantInStreet">
+<form id= "choseTenantFromStreetForm" action="" method="get" >
+<input type="hidden" name="formId" value="choseTenantFromStreetForm">
+<input type="hidden" name="tenant_street_selected" value="">
+<table id="tenantInStreetTable"  dir="rtl" >
+	{% for eachTenantInList in tenantInStreet %}
+          <tr bgcolor="#FFFFFF" onclick="choseTenantFromStreet(this)" onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';">
+                <td zeut="{{eachTenantInList.id}}">{{  eachTenantInList }}</td>
            </tr>
+     {% endfor %}
     </table>
-</div> <!-- apartmentDiv -->
+</form>
+</div> <!-- tenantInStreet -->
+</div> <!--streetDiv -->
 <div id="neigborhoodDiv" class="tab_container" >
 <p>בחר את השכונה הרצויה על ידי קליק על השם הרצוי</p>
-<div id="choseNeighborhood">
+<div id="chooseNeighborhood">
 	<table id="neighborhoodTable"  dir="rtl" >
 	{% for n in recordsOfNeighborhood %}
           <tr id="neighborhoodRow" bgcolor="#FFFFFF"  onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';">
@@ -104,8 +111,10 @@
     </table>
 </div><!-- choseNeighborhood -->
 <p  align="center">
+  <lable id ="preNeigborhoodChoseName">מספר הדיירים ב</lable>
  <lable id ="neigborhoodChoseName">עוד לא נבחרה שכונה</lable>
  <label id="totalTenantsInNiegborhood"></label>
+
 </p>
 <div id="tenantInNeighborhood">
 <form id= "choseTenantFromNeighborhoodForm" action="" method="get" >

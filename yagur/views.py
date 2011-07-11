@@ -6,14 +6,12 @@ from django.contrib.auth.models import User
 
 
 from yagur.models import People
-from address.models import Tenants,Appartments,Streets,Buildings,Neighborhoods,NeighborhoodView
-
-
+from address.models import Tenants,Appartments,Streets,StreetView,Buildings,Neighborhoods,NeighborhoodView
 def homePage(request):
 
     recordsOfPeople = People.objects.order_by("family")
     recordsOfNeighborhood = Neighborhoods.objects.all();
-
+    recordsOfStreet = Streets.objects.all();
     if request.user.is_authenticated():
         userName=request.user
     else:
@@ -27,10 +25,7 @@ def homePage(request):
     if 'familyNameRequest' in request.GET and request.GET['familyNameRequest']:
         familyNameRequest = request.GET['familyNameRequest'];
         recordsOfPeople = recordsOfPeople.filter(family__contains=familyNameRequest);
-    '''
-    if 'id_selected' in request.GET and request.GET['id_selected']:
-        privetAddress=findAddressFromPeopleId(request.GET['id_selected'])
-    '''
+
     if 'neighborhood_selected' in request.GET and request.GET['neighborhood_selected']:
         neighborhoodSelectedId = request.GET['neighborhood_selected']
         neighborhoodSelectedName = Neighborhoods.objects.get(id=neighborhoodSelectedId).name
@@ -41,7 +36,6 @@ def homePage(request):
                 tenantInNeighborhood.append(eachTenant.tenant)
     else:
         return render_to_response('mainpage.html',locals());
-
 def ajaxListPeople(request):
     if request.is_ajax():
         mimetype = 'application/xml'
@@ -50,7 +44,6 @@ def ajaxListPeople(request):
     else:
         messages = "call ajaxListPeople function without ajax"
     return HttpResponse(messages,mimetype)
-
 def ajaxFindAddressFromPeopleId(request):
     global mimetype
     if request.is_ajax():
@@ -59,7 +52,6 @@ def ajaxFindAddressFromPeopleId(request):
     else:
        privetAddress = "call ajaxListPeople function without ajax"
     return HttpResponse( privetAddress , mimetype)
-
 def findAddressFromPeopleId(peopleID):
         try:
                     oneRecordOfTenants = Tenants.objects.get(tenant=peopleID)
@@ -68,10 +60,11 @@ def findAddressFromPeopleId(peopleID):
                     oneRecordofBuilding = Buildings.objects.get(id=oneRecordOfAppartments.building.id)
                     oneRecordofNeighborhood = Neighborhoods.objects.get(id=oneRecordOfAppartments.neighborhood.id)
                     privetAddress =oneRecordOfStreet.name+" "+str(oneRecordOfAppartments.streetNumber)+" "+oneRecordofNeighborhood.name
+                    privetAddress1 = {'streetName': oneRecordOfStreet.name,'streetNumber': oneRecordOfAppartments.streetNumber,'neighborhoodName': oneRecordofNeighborhood.name,'appartmentId': oneRecordOfTenants.appartment.id };
+                    print  privetAddress1['streetName']
         except :
-                    privetAddress ="not found the address of  "+peopleID
+                    privetAddress ="not found the address of  "+peopleI
         return privetAddress
-
 def ajaxFindTenantInNeighborhood (request):
     if request.is_ajax():
         mimetype1 = 'application/xml'
@@ -80,7 +73,6 @@ def ajaxFindTenantInNeighborhood (request):
     else:
         messages = "call ajaxListPeople function without ajax"
     return HttpResponse(messages,mimetype1)
-
 def  FindTenantInNeighborhood (neighborhoodId):
     try:
         tenantInNeighborhood=People.objects.filter(man2__appartment__neighborhood__exact =neighborhoodId)
@@ -101,7 +93,30 @@ def  FindNeighborhoodPolygon (neighborhoodId):
     except:
             neighborhoodVertx = []
     return neighborhoodVertx
-
 def googleEarth(request):
      return render_to_response('googleEarth.html',locals());
-
+def ajaxFindTenantInStreet (request):
+    mimetype1 = 'application/xml'
+    if request.is_ajax():
+        format = 'json'
+        messages = serializers.serialize(format,FindTenantInStreet (request.GET.get("street_id")))
+    else:
+        messages = "call ajaxListPeople function without ajax"
+    return HttpResponse(messages,mimetype1)
+def  FindTenantInStreet (streetId):
+     tenantInStreet=People.objects.filter(man2__appartment__streetName__exact =streetId)
+     return tenantInStreet
+def ajaxGetStreetPolygon(request):
+      if request.is_ajax():
+            mimetype2 = 'application/xml'
+            format = 'json'
+            messages = serializers.serialize(format,FindStreetPolygon (request.GET.get("street_id")))
+      else:
+            messages = "call ajaxGetStreetPolygon function without ajax"
+      return HttpResponse(messages,mimetype2)
+def  FindStreetPolygon (streetId):
+    try:
+            streetVertx=StreetView.objects.filter( street__exact =streetId)
+    except:
+            streetVertx = []
+    return streetVertx

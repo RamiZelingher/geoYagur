@@ -1,4 +1,4 @@
-﻿div#chooseNeighborhood{
+div#chooseStreetDiv{
 	border-style:solid;
 	border-width:1px;
 	border-color:orange;
@@ -6,17 +6,17 @@
 	width: 90%;
 	height:120px;
 }
-#neighborhoodTable {
+#streetTable {
 	background-color: #ffffff;
    	border-style:none;
     float:auto;
     width :90%;
-	}
-#neighborhoodIdTd {
+}
+#streetIdTd {
     visibility:hidden;
     width:2p;
 }
-div#tenantInNeighborhood{
+div#tenantInStreet{
 	border-style:solid;
 	border-width:1px;
 	border-color:orange;
@@ -24,19 +24,16 @@ div#tenantInNeighborhood{
 	width: 90%;
 	height:120px;
 }
-table#tenantInNeighborhoodTable{
+table#tenantInStreetTable{
 	background-color: #ffffff;
    	border-style:none;
     float:auto;
     width :90%;
+    cellpadding:2;
+	cellspacing :2;
 	}
-table#tenantInNeighborhoodTable tr:hover {
+table#tenantInStreetTable tr:hover {
 		font-size: 1.4em;
         color:red;
 }
-#zeut1 {
-  color:white;
- visibility:hidden
-}
 
-	

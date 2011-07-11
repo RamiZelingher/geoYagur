@@ -14,29 +14,22 @@ var balloon = null;
 var lineString = null;
 
 $(document).ready(function() {
-google.earth.createInstance("map", initCallback, failureCallback);
-
+google.earth.createInstance("map3d", initCallback, failureCallback);
 			});
-
 function initCallback(object) {
   ge = object;
   ge.getWindow().setVisibility(true);
   ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
   ge.getLayerRoot().enableLayerById(ge.LAYER_BORDERS, true);
-  view (32.741433,35.078658,3000);
- 
- // createPlacemark("kibutz yagur",  32.741433,35.078658);
- //showBallon(placemark,"line 39" );
- // alert(String(arrayOfPoints[1].x));
- // showPoligon (arrayOfPoints);
-  //showkml(kmlstring);
-}
 
+ // loadKml("s99001.kml");
+ view (32.741433,35.078658,3000);
+}
 function failureCallback(object) {
+    alert(object);
 }
-
 function createPlacemark(Markname,x,y) {
-  placemark = ge.createPlacemark('');
+  placemark = ge.createPlacemark(' ');
   placemark.setName(Markname);
   ge.getFeatures().appendChild(placemark);
 
@@ -55,7 +48,6 @@ function createPlacemark(Markname,x,y) {
   placemark.setGeometry(point);
 
 }
-
 function view(x,y,z) {
 // Create a new LookAt
  lookAt = ge.createLookAt('');
@@ -68,7 +60,6 @@ lookAt.setRange(z);
 // Update the view in Google Earth
 ge.getView().setAbstractView(lookAt);
 }
-
 function showBallon(placemark,msg) {
 		balloon = ge.createHtmlStringBalloon('');
 		balloon.setFeature(placemark);
@@ -83,7 +74,6 @@ function showkml(kmlString){
          ge.getFeatures().appendChild(kmlObject);
 		 ge.getView().setAbstractView(kmlObject.getAbstractView());
 }
-
 function showPoligon (vertex) {
 // Create the placemark
 
@@ -109,3 +99,13 @@ lineStyle.getColor().set('9900ffff');  // aabbggrr format
 ge.getFeatures().appendChild(lineStringPlacemark);
 }
 
+function loadKml(filename){
+var link = ge.createLink('');
+var href = 'http://localhost/geoyagur/static/kml/'+filename;
+link.setHref(href);
+var networkLink = ge.createNetworkLink('');
+
+networkLink.setLink(link);// Sets the link, refreshVisibility, and flyToView
+networkLink.setFlyToView(true);
+ge.getFeatures().appendChild(networkLink);
+}

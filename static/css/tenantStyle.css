@@ -2,8 +2,6 @@
 #peopleTable {
    	border-style:none;
     width :90%;
-    cellpadding:2;
-	cellspacing :2;
     font-size: 1em;
 	}
 #peopleTable tr:hover {
@@ -18,7 +16,6 @@
 
 
 #searchArea {
-	dir :rtl;
 	height: 140px; 
 	width: 80%;
 	border-style:none;
