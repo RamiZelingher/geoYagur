@@ -14,16 +14,17 @@ var balloon = null;
 var lineString = null;
 
 $(document).ready(function() {
-google.earth.createInstance("map3d", initCallback, failureCallback);
+show3d()
 			});
+function show3d(){
+ google.earth.createInstance("map3d", initCallback, failureCallback);
+}
 function initCallback(object) {
   ge = object;
   ge.getWindow().setVisibility(true);
   ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
   ge.getLayerRoot().enableLayerById(ge.LAYER_BORDERS, true);
-
- // loadKml("s99001.kml");
- view (32.741433,35.078658,3000);
+    view (32.741433,35.078658,3000);
 }
 function failureCallback(object) {
     alert(object);
@@ -32,21 +33,18 @@ function createPlacemark(Markname,x,y) {
   placemark = ge.createPlacemark(' ');
   placemark.setName(Markname);
   ge.getFeatures().appendChild(placemark);
-
   // Create style map for placemark
   var icon = ge.createIcon('');
   icon.setHref('http://localhost/geoyagur/static/img/red-circle.png');
   var style = ge.createStyle('');
   style.getIconStyle().setIcon(icon);
   placemark.setStyleSelector(style);
-
   // Create point
   var la = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
   point = ge.createPoint('');
   point.setLatitude(x);
   point.setLongitude(y);
   placemark.setGeometry(point);
-
 }
 function view(x,y,z) {
 // Create a new LookAt
@@ -98,7 +96,6 @@ lineStyle.getColor().set('9900ffff');  // aabbggrr format
 // Add the feature to Earth
 ge.getFeatures().appendChild(lineStringPlacemark);
 }
-
 function loadKml(filename){
 var link = ge.createLink('');
 var href = 'http://localhost/geoyagur/static/kml/'+filename;
@@ -106,6 +103,6 @@ link.setHref(href);
 var networkLink = ge.createNetworkLink('');
 
 networkLink.setLink(link);// Sets the link, refreshVisibility, and flyToView
-networkLink.setFlyToView(true);
+networkLink.setFlyToView(false);
 ge.getFeatures().appendChild(networkLink);
 }

@@ -17,13 +17,14 @@ ajaxListPeople=function() {
 responseAjaxListPeople = function(data){
     $("#peopleTable tr").remove();
     $.each(data, function(i,record){
-                                                     $('#peopleTable').append('<tr> <td>'+  record.fields.family+'</td> <td>'+record.fields.given+'</td> <td >'+ record.pk+'</td> </tr>')
+                                                     $('#peopleTable').append('<tr> <td>'+  record.fields.family+'</td> <td>'+record.fields.given+'</td> <td  id="zeut">'+ record.pk+'</td> </tr>')
                                                      });
     $("#totalPeople").html (data.length)
     $("#peopleTable tr:odd").css("backgroundColor", "#ffcc99");
     $("#peopleTable tr").click(ajaxTenantChoose);
 }
 ajaxTenantChoose = function() {
+    ajaxFindDepartmentIdFromTenant(this.cells[2].innerHTML)
     $.ajax({
                 type: "GET",
                  url: "ajaxFindAddressFromPeopleId",
@@ -31,12 +32,27 @@ ajaxTenantChoose = function() {
                  success: responseAjaxTenantChoose
                 });
     };
+ajaxFindDepartmentIdFromTenant = function(id_selected) {
+    $.ajax({
+                type:"GET",
+                url: "ajaxFindDepartmentIdFromTenant",
+                data:  {id_selected:id_selected},
+                success: responseAjaxFindDepartmentIdFromTenant
+              })
+};
+ responseAjaxFindDepartmentIdFromTenant = function(data){
+            kmlFileName = "a"+data+".kml";
+            view (32.741433,35.078658,2000);
+             loadKml(kmlFileName);
+             drawKmlOnMap( yagurMap,kmlFileName)
+
+ }
 responseAjaxTenantChoose = function(data){
 // createPlacemark("",  32.741433,35.078658);
 // address = data[streetName] +"   "+data[streetNumber]+"    "+data[neighborhoodName]
 //  showBallon(placemark,data );
 //    drawMarker( yagurMap, mapnik,vector_layer,35.08,32.739);
-    alert(String(data));
+    alert(data);
 };
 ajaxNeighbourhoodChoose = function(){
             $("#neigborhoodChoseName").html (this.cells[0].innerHTML);
@@ -45,6 +61,7 @@ ajaxNeighbourhoodChoose = function(){
 //            $.getJSON("ajaxGetNeighborhoodPolygon",clientData, responseAjaxNeighbourhoodPolygon)
             kmlFileName = "n"+ this.cells[1].innerHTML+".kml";
              loadKml(kmlFileName);
+            drawKmlOnMap( yagurMap,kmlFileName)
             }
 responseAjaxNeighbourhoodChoose = function(data1){
     $("#tenantInNeighborhoodTable tr").remove();
@@ -72,6 +89,8 @@ ajaxStreetChoose = function(){
 //            $.getJSON("ajaxGetStreetPolygon",clientData, responseAjaxStreetPolygon)
              kmlFileName = "s"+ this.cells[1].innerHTML+".kml";
              loadKml(kmlFileName);
+            alert(kmlFileName)
+            drawKmlOnMap( yagurMap,kmlFileName)
             }
 responseAjaxStreetChoose = function(data2){
     $("#tenantInStreetTable tr").remove();

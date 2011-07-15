@@ -45,7 +45,6 @@ def ajaxListPeople(request):
         messages = "call ajaxListPeople function without ajax"
     return HttpResponse(messages,mimetype)
 def ajaxFindAddressFromPeopleId(request):
-    global mimetype
     if request.is_ajax():
         mimetype = 'text/plain'
         privetAddress = findAddressFromPeopleId(request.GET['id_selected'])
@@ -60,8 +59,6 @@ def findAddressFromPeopleId(peopleID):
                     oneRecordofBuilding = Buildings.objects.get(id=oneRecordOfAppartments.building.id)
                     oneRecordofNeighborhood = Neighborhoods.objects.get(id=oneRecordOfAppartments.neighborhood.id)
                     privetAddress =oneRecordOfStreet.name+" "+str(oneRecordOfAppartments.streetNumber)+" "+oneRecordofNeighborhood.name
-                    privetAddress1 = {'streetName': oneRecordOfStreet.name,'streetNumber': oneRecordOfAppartments.streetNumber,'neighborhoodName': oneRecordofNeighborhood.name,'appartmentId': oneRecordOfTenants.appartment.id };
-                    print  privetAddress1['streetName']
         except :
                     privetAddress ="not found the address of  "+peopleI
         return privetAddress
@@ -120,3 +117,4 @@ def  FindStreetPolygon (streetId):
     except:
             streetVertx = []
     return streetVertx
+

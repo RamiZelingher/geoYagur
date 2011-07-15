@@ -18,6 +18,7 @@
         fillOpacity: 0.6
           };
     $(document).ready(function() {
+
     yagurMap = new OpenLayers.Map("map");
     mapnik = new OpenLayers.Layer.OSM("מפת רחובות");
     vector_layer = new OpenLayers.Layer.Vector('מבני מגורים')
@@ -37,7 +38,7 @@
         var gsat = new OpenLayers.Layer.Google("Google Satellite", {type:google.maps.MapTypeId.SATELLITE} );
      yagurMap.addLayers([gphy, gsat]);
      yagurMap.addControl(new OpenLayers.Control.LayerSwitcher());
-     drawBox( yagurMap, mapnik,vector_layer,style_green,35.075,32.749,35.0745,32.749,35.0745,32.7485,35.075,32.7485);
+    // drawBox( yagurMap, mapnik,vector_layer,style_green,35.075,32.749,35.0745,32.749,35.0745,32.7485,35.075,32.7485);
        });
 function drawPoint( mape,server,vector,x,y){
             point = new OpenLayers.Geometry.Point(x,y).transform
@@ -87,4 +88,20 @@ function drawBox(map,mapnik, vector,style,x1,y1,x2,y2,x3,y3,x4,y4){
     var linearRing = new OpenLayers.Geometry.LinearRing(points);
     var polygonFeature = new OpenLayers.Feature.Vector(linearRing,null, style);
     vector.addFeatures([polygonFeature]);
+}
+function drawKmlOnMap(map,filename){
+    url = "../static/kml/"+filename
+    alert(url)
+    kmllLayer=new OpenLayers.Layer.Vector("KML", {
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                url: url,
+                format: new OpenLayers.Format.KML({
+                    extractStyles: true,
+                    extractAttributes: true,
+                    maxDepth: 2
+                })
+            })
+        })
+    map.addLayers([kmllLayer]);
 }

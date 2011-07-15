@@ -69,3 +69,18 @@ def ajaxupdateStreet(request):
     else:
         messages = "call ajaxupdateStreet function without ajax"
     return HttpResponse(messages,mimetype)
+
+def ajaxFindDepartmentIdFromTenant(request):
+    mimetype5 = 'text/plain'
+    if request.is_ajax():
+        messages = FindDepartmentIdFromTenant(request.GET['id_selected'])
+    else :
+        messages = "problem in ajaxFindDepartmentIdFromTenant function in view file"
+    return HttpResponse(messages,mimetype5)
+def FindDepartmentIdFromTenant(peopleID):
+     try:
+        tenantObject = Tenants.objects.get(tenant=int(peopleID))
+        msg = tenantObject.appartment
+     except :
+         msg ="problem in FindDepartmentIdFromTenant function in view file"
+     return msg
